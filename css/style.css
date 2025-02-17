@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-name h2{
+    padding-top: 10px;
+}
+
+.logo-style{
+    color: rgb(24, 231, 231);
+    font-size: 40px;
+}
+
+.contact-btn button{
+    background-color: rgb(24, 231, 231);; 
+    text-shadow: 1px 1px 2px black;
+    color: #fff;
+    border: none;
+    padding:8px 30px;
+    border-radius: 5px;
+}
+
+/* Profile */
+
+.home-info p{
+   text-align: justify;
+}
+
+.social-icons i{
+    font-size: 25px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px black;
+}
+
+.home{
+    order: 1;
+}
+
+.home-img{
+    order: 2;
+} 
+
+.home-img .img-box{
+    position: relative;
+    width: 26vw;
+    height: 26vw;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, rgb(26, 193, 193));
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after{
+    animation-delay: -5s ;
+}
+
+@keyframes rotate-border{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.home-img .img-box .img-item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    border-radius: 50%;
+    border: .1px solid #1f242d;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img{
+    background-color: transparent;
+    top: 10px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+    left: -10px;
+}
+
+/* Founder Details Section */
+
+.founder-details {
+    text-align: center;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px 20px 0 20px;
+}
+
+.founder-details .f2 {
+    color: rgb(24, 231, 231);
+}
+
+.founder-details h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    color:#fff; 
+    border-bottom: 2px solid #e0e0e0; 
+    padding-bottom: 10px;
+}
+
+.founder-details h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(24, 231, 231);
+    border-bottom: 1px solid #e0e0e0; 
+    padding-bottom: 8px;
+}
+
+.founder-details p {
+    font-size: 18px;
+    line-height: 1.8; /* Increased line height for better readability */
+    color: #fff; /* Dark color for better contrast */
+    text-align: justify; /* Justify text for a cleaner look */
+    padding: 20px 0; /* Space between paragraphs */
+    padding: 0 15px; /* Padding for better text alignment */
+}
+
+.founder-details ul {
+    margin: 20px 0;
+    padding-left: 20px; /* Indent list items */
+}
+
+.founder-details ul li {
+    font-size: 18px;
+    line-height: 1.6; /* Increased line height for readability */
+    color: #fff; /* Dark color for list items */
+    position: relative; /* Position relative for custom bullet styling */
+}
+
+.founder-details ul li::before {
+    content: '•'; /* Custom bullet character */
+    color: rgb(24, 231, 231);
+    font-size: 24px; /* Size of the bullet */
+    position: absolute; /* Absolute positioning for custom bullets */
+    left: -25px; /* Adjust to position the bullet */
+    top: 0; /* Align with the top of the list item */
+}
+
+@media screen and (max-width: 480px) {
+
+    .home{
+        order: 2;
+    }
+    
+    .home-img{
+        order: 1;
+        display: grid;
+        place-items: center;
+        margin-bottom: 20px;
+    }
+
+    .home-img .img-box{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .company-name h2{
+        font-size: 20px;
+    }
+
+    .contact-btn button{
+        padding:5px 20px;
+    }
+
+    .logo-style{
+        font-size: 25px;
+    }
+}
