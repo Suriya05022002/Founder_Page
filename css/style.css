@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -36,7 +37,13 @@
    text-align: justify;
 }
 
-.social-icons i{
+.social-icons a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-icons a i{
     font-size: 25px;
     cursor: pointer;
     text-shadow: 2px 2px 4px black;
@@ -238,6 +245,7 @@
         transform: translateX(0);
     }
 }
+
 
 @media screen and (max-width: 480px) {
     .home{
